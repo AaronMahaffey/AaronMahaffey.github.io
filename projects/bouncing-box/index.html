@@ -59,14 +59,15 @@
                     direction = -1;
                     console.log(direction);
                 }
-
-                else(position > boardWidth)
-                         console.log("Left Wall Hit")
-                         direction = 2;
-                         console.log(direction)
+                if(position < 0) {
+                    console.log("Left Wall Hit")
+                    direction = 1;
+                    console.log()
                 }
+        
                 
                 box.css('left', position);      // set the 'left' CSS property of the box to the new value of position
+			    box.css('right', position);     // set the 'right' CSS property of the box to the new value of position
 			};
 
 
